@@ -1,134 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Familore</title>
-    <meta name="description" content="Official homepage for Familore, a family tree app for building, preserving, and exploring family connections.">
+    <meta name="theme-color" content="#8c6a51">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Familore">
+    <meta name="description" content="Build, preserve, and explore your family tree.">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="icon" href="assets/familore-icon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="legal.css">
+    <link rel="apple-touch-icon" href="assets/icon-192.png">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="legal-shell">
-        <div class="legal-vine legal-vine-left" aria-hidden="true"></div>
-        <div class="legal-vine legal-vine-right" aria-hidden="true"></div>
-
-        <header class="legal-topbar">
-            <div class="brand">
-                <img src="assets/familore-icon.svg" alt="Familore icon">
-                <div>
-                    Familore
-                    <small>Official homepage</small>
-                </div>
-            </div>
-            <nav class="top-links" aria-label="Primary">
-                <a href="index.html">Home</a>
-                <a href="support.html">Support</a>
-                <a href="privacy.html">Privacy Policy</a>
-            </nav>
-        </header>
-
-        <main class="legal-main">
-            <section class="hero">
-                <div class="panel hero-copy">
-                    <h1>Build, preserve, and explore your family tree.</h1>
-                    <p>
-                        Familore is a family tree app designed to help you collect names, photos,
-                        stories, and relationships in one calm, easy-to-read space.
-                    </p>
-                    <p>
-                        The app focuses on clarity, local-first data handling, and a visual tree
-                        experience that works across desktop and mobile devices.
-                    </p>
-                    <div class="hero-actions">
-                        <a class="button-link button-link-primary" href="support.html">Get Support</a>
-                        <a class="button-link button-link-secondary" href="privacy.html">Read Privacy Policy</a>
-                    </div>
-                </div>
-
-                <aside class="panel hero-side">
-                    <div class="hero-side-card">
-                        <strong>App name</strong>
-                        <p>Familore</p>
-                    </div>
-                    <div class="hero-side-card">
-                        <strong>Support email</strong>
-                        <p><a href="mailto:sansinsans@gmail.com">sansinsans@gmail.com</a></p>
-                    </div>
-                    <div class="hero-side-card">
-                        <strong>Platform scope</strong>
-                        <p>Android publishing in progress, with web-based family tree management available now.</p>
-                    </div>
-                </aside>
-            </section>
-
-            <section class="panel section">
-                <h2>What Familore helps you do</h2>
-                <div class="grid-two">
-                    <div class="meta-list">
-                        <div class="meta-item">
-                            Family tree building
-                            <span>Create and edit people, partners, parents, and children in a visual tree layout.</span>
-                        </div>
-                        <div class="meta-item">
-                            Photo support
-                            <span>Add profile photos to make family connections easier to remember.</span>
-                        </div>
-                    </div>
-                    <div class="meta-list">
-                        <div class="meta-item">
-                            Local-first storage
-                            <span>Your tree data is designed to stay on your own device unless you choose to export it.</span>
-                        </div>
-                        <div class="meta-item">
-                            Import and backup
-                            <span>Export your tree as JSON and restore it later when needed.</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="panel section">
-                <h2>Why people use it</h2>
-                <div class="grid-two">
-                    <div class="meta-list">
-                        <div class="meta-item">
-                            Clear visual structure
-                            <span>Parents, partners, and children stay readable even as the tree grows.</span>
-                        </div>
-                        <div class="meta-item">
-                            Mobile and desktop friendly
-                            <span>Use zoom controls and touch gestures to explore the tree across different screen sizes.</span>
-                        </div>
-                    </div>
-                    <div class="meta-list">
-                        <div class="meta-item">
-                            Local-first peace of mind
-                            <span>Your family information stays under your control, with backup and restore available when needed.</span>
-                        </div>
-                        <div class="meta-item">
-                            Gentle organization
-                            <span>Photos, maiden names, notes, and family links live together in one consistent place.</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="panel section">
-                <h2>Need help?</h2>
-                <p>
-                    If you need support, want to report a problem, or have a feature suggestion,
-                    the support page includes contact details and basic guidance.
-                </p>
-                <div class="hero-actions">
-                    <a class="button-link button-link-primary" href="support.html">Open Support Page</a>
-                </div>
-            </section>
-        </main>
-
-        <footer class="legal-footer">
-            Familore
-        </footer>
+    <div class="vine-rail vine-rail-left" aria-hidden="true">
+        <div class="vine vine-a"></div>
+        <div class="vine vine-b"></div>
+        <div class="vine vine-c"></div>
+        <div class="vine vine-d"></div>
     </div>
+    <div class="vine-rail vine-rail-right" aria-hidden="true">
+        <div class="vine vine-a"></div>
+        <div class="vine vine-b"></div>
+        <div class="vine vine-c"></div>
+        <div class="vine vine-d"></div>
+    </div>
+
+    <header class="app-header">
+        <div class="header-topbar">
+            <h1>Familore</h1>
+            <button
+                id="mobile-header-toggle"
+                class="mobile-header-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="header-actions"
+                aria-label="Menüyü aç"
+            >
+                <span class="toggle-pill"></span>
+                <span class="toggle-label">Menüyü Aç</span>
+            </button>
+        </div>
+        <div class="header-actions" id="header-actions">
+            <div class="toolbar-group toolbar-group-view">
+                <button id="view-tree-btn" class="ghost-btn active" type="button">Ağaç</button>
+                <button id="view-focus-btn" class="ghost-btn" type="button">Çekirdek Aile</button>
+                <button id="view-list-btn" class="ghost-btn" type="button">Liste</button>
+            </div>
+            <div class="toolbar-group search-box">
+                <input id="search-input" type="search" placeholder="Ad veya soyad ara">
+                <button id="clear-search-btn" class="ghost-btn" type="button">Temizle</button>
+            </div>
+            <div class="toolbar-group export-box">
+                <button id="export-json-btn" class="ghost-btn" type="button">JSON indir</button>
+                <button id="import-json-btn" class="ghost-btn" type="button">JSON yükle</button>
+                <button id="print-tree-btn" class="ghost-btn" type="button">Yazdır / PDF</button>
+                <input id="import-json-input" type="file" accept="application/json,.json" hidden>
+            </div>
+            <div class="toolbar-group toolbar-group-actions">
+                <button id="undo-btn" class="ghost-btn" type="button" disabled>Son işlemi geri al</button>
+                <button id="add-root-btn" class="primary-btn">İlk Kişiyi Ekle</button>
+                <button id="clear-btn" class="danger-btn" style="display: none;">Ağacı Temizle</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="tree-container" id="tree-container">
+        <div class="tree" id="tree-root"></div>
+        <div id="list-root" class="list-root"></div>
+        <div id="empty-search-state" class="empty-search-state">Aramaya uygun kişi bulunamadı.</div>
+    </main>
+
+    <div id="person-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-form-btn">&times;</span>
+            <h2 id="modal-title">Kişi Ekle</h2>
+            <form id="person-form">
+                <div class="photo-upload">
+                    <img id="photo-preview" src="" alt="Kişi fotoğrafı önizleme">
+                    <input type="file" id="photo-input" accept="image/*">
+                    <label for="photo-input" class="photo-btn">Fotoğraf Seç</label>
+                    <small id="photo-loading-text">Fotoğraf işleniyor, lütfen bekleyin...</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="first-name">Ad *</label>
+                    <input type="text" id="first-name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="middle-name">Göbek Adı</label>
+                    <input type="text" id="middle-name">
+                </div>
+
+                <div class="form-group">
+                    <label for="last-name">Soyad *</label>
+                    <input type="text" id="last-name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="maiden-name">Kızlık Soyad</label>
+                    <input type="text" id="maiden-name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="birth-date">Doğum Tarihi</label>
+                        <input type="text" id="birth-date" placeholder="Örn: 1980 veya 15.05.1980">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Cinsiyet</label>
+                        <select id="gender">
+                            <option value="">Seçiniz</option>
+                            <option value="Kadın">Kadın</option>
+                            <option value="Erkek">Erkek</option>
+                            <option value="Diğer">Diğer</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="birth-place">Doğum Yeri</label>
+                    <input type="text" id="birth-place" placeholder="Örn: İstanbul">
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Kısa Not</label>
+                    <input type="text" id="notes" placeholder="Örn: İlk evlilikten oğlu">
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="primary-btn" id="save-btn">Kaydet</button>
+                    <button type="button" id="delete-btn" class="danger-btn" style="display:none;">Kişiyi Sil</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="action-modal" class="modal">
+        <div class="modal-content action-modal-content">
+            <span class="close-btn" id="close-action-btn">&times;</span>
+            <h2 id="action-person-name">İşlem Seç</h2>
+            <div class="action-buttons">
+                <button id="edit-person-act" class="primary-btn">Bilgileri Düzenle</button>
+                <button id="add-partner-act" class="primary-btn">Eş Ekle</button>
+                <button id="add-parent-act" class="primary-btn secondary-act">Anne/Baba Ekle</button>
+                <button id="add-child-act" class="success-btn">Yeni Çocuk Ekle</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content action-modal-content">
+            <span class="close-btn" id="close-confirm-btn">&times;</span>
+            <h2 id="confirm-title">Emin misin?</h2>
+            <p id="confirm-message" class="confirm-message">Bu işlem uygulanacak.</p>
+            <div class="form-actions">
+                <button id="confirm-cancel-btn" class="ghost-btn" type="button">Vazgeç</button>
+                <button id="confirm-accept-btn" class="danger-btn" type="button">Evet</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="zoom-controls">
+        <button id="zoom-in-btn" title="Yakınlaştır">+</button>
+        <div id="zoom-label">100%</div>
+        <button id="zoom-out-btn" title="Uzaklaştır">-</button>
+        <button id="focus-person-btn" title="Seçili kişiye git">◎</button>
+        <button id="zoom-reset-btn" title="Sıfırla">⌂</button>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
